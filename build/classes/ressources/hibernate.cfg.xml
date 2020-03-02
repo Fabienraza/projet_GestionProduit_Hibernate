@@ -3,18 +3,31 @@
         "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
         "http://hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
-     <session-factory>
+  <session-factory>
               
       <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+      <!-- precision du driver utilisé -->
               
       <property name="connection.url">jdbc:mysql://localhost:3306/gestionProduitHibernate?createDatabaseIfNotExist=true</property>
+      <!-- précision de l'URL et du nom de la base de donnée à créer s'il n'existe pas dans le SGBD -->
               
       <property name="connection.username">root</property>
+      <!--  precision du nom d'utilisateur pour la connexion -->
+      
       <property name="show_sql">true</property>           
+      <!-- affichage des requete MySQL sur la console -->
+      
       <property name="connection.password"></property>
-      <property name = "hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>        
+      <!-- Precision du mot de passe pour la connexion -->
+      
+      <property name = "hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+	  <!-- Precision du langage utilisé -->
+           
       <property name="hbm2ddl.auto">update</property>
+      <!-- mise à jour de la base de donnée à chaque execution du programme -->
+      
        <mapping class="beans.Produit"/>
+       <!-- mapping de la classe Produit dans Hibernate -->
       
           
    </session-factory>

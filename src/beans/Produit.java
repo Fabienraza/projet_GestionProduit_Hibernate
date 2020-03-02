@@ -36,7 +36,11 @@ public class Produit {
 	}
 
 
-
+	public Produit(String nomproduit, String description) {
+		super();
+		this.nomproduit = nomproduit;
+		this.description = description;
+	}
 
 
 	public int getIdProduit() {
@@ -67,6 +71,13 @@ public class Produit {
 	public void setDescription(String description) {
 		this.description = description;
 	}
+
+
+	@Override
+	public String toString() {
+		return "Produit [idProduit=" + idProduit + ", nomproduit=" + nomproduit + ", description=" + description + "]";
+	}
+	
 	
 	
 	
